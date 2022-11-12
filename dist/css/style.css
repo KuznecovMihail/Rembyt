@@ -195,7 +195,7 @@ body .sub_title {
 }
 body .button {
   color: #ffffff;
-  font-size: calc(14px + 10 * ((100vw - 320px) / 960));
+  font-size: calc(12px + 12 * ((100vw - 320px) / 960));
   font-weight: 500;
   background: #3C93F0;
   padding: 16px 22px;
@@ -320,41 +320,6 @@ body .main_page .main__container .main_bg {
 body .main_page .main_mobile_but {
   display: none;
 }
-@media screen and (max-width: 576px) {
-  body .main_page .main_mobile_but {
-    display: flex;
-    justify-content: center;
-  }
-  body .main_page .main_mobile_but .but {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    display: flex;
-    align-items: center;
-  }
-  body .main_page .main_mobile_but .but .but_text {
-    font-size: calc(10px + 14 * ((100vw - 320px) / 960));
-    font-weight: 600;
-    color: #ffffff;
-  }
-  body .main_page .main_mobile_but .but_call {
-    padding-left: 10px;
-    border-radius: 15px 0px 0px 15px;
-    background: #3C93F0;
-  }
-  body .main_page .main_mobile_but .but_call img {
-    width: 25px;
-    margin-right: 10px;
-  }
-  body .main_page .main_mobile_but .but_whats {
-    padding-right: 10px;
-    border-radius: 0px 15px 15px 0px;
-    background: #09D743;
-  }
-  body .main_page .main_mobile_but .but_whats img {
-    width: 25px;
-    margin-right: 10px;
-  }
-}
 @media screen and (max-width: 768px) {
   body .main_page .main__container {
     margin: 25px auto;
@@ -410,6 +375,22 @@ body .main_page .main_mobile_but {
     margin-right: 10px;
   }
 }
+@media screen and (max-width: 390px) {
+  body .main_page .main__container .main_mobile_but .but_call {
+    padding-left: 10px;
+  }
+  body .main_page .main__container .main_mobile_but .but_call img {
+    width: 15px;
+    margin-right: 10px;
+  }
+  body .main_page .main__container .main_mobile_but .but_whats {
+    padding-left: 10px;
+  }
+  body .main_page .main__container .main_mobile_but .but_whats img {
+    width: 15px;
+    margin-right: 10px;
+  }
+}
 @media screen and (max-width: 1250px) {
   body .main_page {
     background: #02C7FC url("../img/main-page_man1.png") 100% 0/40% auto no-repeat;
@@ -445,6 +426,8 @@ body .help .help_container .help_card {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  color: #3E3E3E;
+  margin-bottom: 70px;
 }
 body .help .help_container .help_card .card_item {
   background: #ffffff;
@@ -480,17 +463,36 @@ body .help .help_container .help_card .card_item .card_flex .card_about .more {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-@media screen and (max-width: 1340px) {
+@media screen and (max-width: 1324px) {
+  body .help .help_container .help_card .card_item .card_flex .card_about {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 1252px) {
   body .help .help_container .help_card {
     justify-content: center;
     flex-direction: column;
   }
   body .help .help_container .help_card .card_item {
     width: 60%;
-    margin: 10px auto;
+    margin: 20px auto;
+  }
+  body .help .help_container .help_card .card_item .card_flex {
+    justify-content: space-around;
+  }
+  body .help .help_container .help_card .card_item .card_flex .card_about {
+    margin-left: 10px;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
+  body .help .help_container .help_card .card_item {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  body .help .help_container .help_card .card_item .card_flex .card_about {
+    margin-left: 0px;
+  }
   body .help .help_container .help_card .card_item .card_img {
     display: none;
   }
@@ -502,7 +504,7 @@ body .masters {
 body .masters .masters__container .masters_add {
   display: flex;
   justify-content: space-between;
-  margin-top: 78px;
+  margin-top: 40px;
   align-items: center;
 }
 body .masters .masters__container .masters_add .masters_call {
@@ -528,6 +530,12 @@ body .masters .masters__container .masters_add .masters_call .call .call_text .c
   margin-top: 5px;
   font-weight: 400;
   font-size: calc(12px + 1 * ((100vw - 320px) / 960));
+}
+@media screen and (max-width: 280px) {
+  body .masters .masters__container .masters_add .masters_call .call .call_button {
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
 }
 body .masters .masters__container .masters_add .masters_call .call_r {
   width: 25%;
@@ -555,13 +563,14 @@ body .masters .masters__container .masters_add .masters_at .at li:not(:last-chil
 @media screen and (max-width: 992px) {
   body .masters .masters__container .masters_add .masters_at {
     margin-left: 0px;
-    margin-top: 20px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
   }
 }
 @media screen and (max-width: 992px) {
   body .masters .masters__container .masters_add {
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
   }
 }

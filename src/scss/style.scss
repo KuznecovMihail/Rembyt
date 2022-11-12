@@ -118,7 +118,7 @@ body{
     }
     .button{
         color: #ffffff;
-        @include adaptiv-font(24, 14);
+        @include adaptiv-font(24, 12);
         font-weight: 500;
         background: #3C93F0;
         padding: 16px 22px;
@@ -270,43 +270,7 @@ body{
             display: none;
         }
 
-        @media screen and (max-width: 576px ){
-            .main_mobile_but{
-                display: flex; 
-                justify-content: center;
-
-                .but{
-                    padding-top: 15px;
-                    padding-bottom: 15px;
-                    display: flex;
-                    align-items: center;
-                    .but_text{
-                        @include adaptiv-font(24, 10);
-                        font-weight: 600;
-                        color: #ffffff;
-                    }
-                }
-                .but_call{
-                    padding-left: 10px;
-                    border-radius: 15px 0px 0px 15px; 
-                    background: #3C93F0;
-                    img{
-                        width: 25px;
-                        margin-right: 10px;
-                    }
-                }
-                .but_whats{
-                    padding-right: 10px;
-                    border-radius: 0px 15px 15px 0px; 
-                    background: #09D743;
-                    img{
-                        width: 25px;
-                        margin-right: 10px;
-                    }
-                }
-                
-            }
-        }
+        
     
         @media screen and (max-width: 768px ) {
             .main__container{
@@ -368,6 +332,26 @@ body{
             }
 
         }
+        @media screen and (max-width: 390px ){
+            .main__container{
+                .main_mobile_but{
+                    .but_call{
+                        padding-left: 10px;
+                        img{
+                            width: 15px;
+                            margin-right: 10px;
+                        }
+                    }
+                    .but_whats{
+                        padding-left: 10px;
+                        img{
+                            width: 15px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @media screen and (max-width: 1250px) {
@@ -398,6 +382,7 @@ body{
             }
         }
     }
+    
 
     //------help---------------------------------
 
@@ -408,6 +393,8 @@ body{
                 display: flex;
                 justify-content: space-between;
                 margin-top: 20px;
+                color: #3E3E3E;
+                margin-bottom: 70px;
                .card_item{
                 background: #ffffff;
                 margin-top: 30px;
@@ -446,22 +433,52 @@ body{
                }
                
             }
-            @media screen and (max-width: 1340px) {
+            @media screen and (max-width: 1324px){
+                .help_card{
+                    .card_item{
+                        .card_flex{
+                            .card_about{
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 1252px) {
                 .help_card{
                     justify-content: center;
                     flex-direction: column;
 
                     .card_item{
                         width: 60%;
-                        margin: 10px auto;
+                        margin: 20px auto;
+
+                        .card_flex{
+                            justify-content: space-around;
+                            .card_about{
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 768px){
+                .help_card{
+                    .card_item{
+                        width: 100%;
                     }
                 }
             }
 
-            @media screen and (max-width: 650px) {
+            @media screen and (max-width: 400px) {
                 .help_card{
 
                     .card_item{
+                        .card_flex{
+                            .card_about{
+                                margin-left: 0px;
+                            }
+                        }
                         .card_img{
                             display: none;
                         }
@@ -478,7 +495,7 @@ body{
            .masters_add{
             display: flex;
             justify-content: space-between;
-            margin-top: 78px;
+            margin-top: 40px;
             align-items: center;
                 .masters_call{
                     display: flex;
@@ -504,6 +521,12 @@ body{
                             font-weight: 400;
                             @include adaptiv-font(13, 12);
                            }
+                        }
+                        @media screen and (max-width: 280px) {
+                            .call_button{
+                                padding: 10px 15px;
+                                border-radius: 10px;
+                            }
                         }
                     }
                     .call_r{
@@ -538,20 +561,16 @@ body{
                 @media screen and (max-width: 992px){
                     .masters_at{
                         margin-left: 0px;
-                        margin-top: 20px;
+                        margin-bottom: 40px;
                         display: flex;
                         justify-content: center;
-                        // .at{
-                        //     li{
-                        //         text-align: center;
-                        //     }
-                        // }
                     }
                }
            }
            @media screen and (max-width: 992px){
                 .masters_add{
-                    display: block;
+                    display: flex;
+                    flex-direction: column-reverse;
                 }
            } 
         }
