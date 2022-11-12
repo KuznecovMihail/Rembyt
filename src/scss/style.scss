@@ -98,13 +98,37 @@ body.lock{
 
 body{
     @include adaptiv-font(14, 12);
-    color: #3E3E3E;
+    color: #ffffff;
     font-family: 'Montserrat', sans-serif;
+    background: rgb(40, 39, 39);
+
+    .title{
+        color: #ffffff;
+        @include adaptiv-font(48, 40);
+        text-align: center;
+        font-weight: 800;
+        margin-top: 70px;
+    }
+    .sub_title{
+        color: #ffffff;
+        @include adaptiv-font(24, 22);
+        text-align: center;
+        font-weight: 400;
+        margin-top: 20px;
+    }
+    .button{
+        color: #ffffff;
+        @include adaptiv-font(24, 14);
+        font-weight: 500;
+        background: #3C93F0;
+        padding: 16px 22px;
+        border-radius: 15px;
+        text-align: center;
+    }
+
     //-------header--------------------------
 
     .header{
-
-        background: rgb(40, 39, 39);
 
         .header_nav{
             display: flex;
@@ -205,17 +229,8 @@ body{
             align-items: center;
             .main{
                 margin-left: 40px;
-                .sub_title{
-                    @include adaptiv-font(30, 24);
-                    font-weight: 600;
-                }
                 .main_sub_title{
                     margin-bottom: 30px;
-                }
-                .title{
-                    @include adaptiv-font(58, 36);
-                    font-weight: 900;
-                    color: #ffffff;
                 }
                 .main_title{
                     margin-bottom: 30px;
@@ -230,13 +245,10 @@ body{
                     margin-bottom: 45px;
                     display: inline-block;
                 }
-                .button{
-                    color: #ffffff;
-                    @include adaptiv-font(24, 20);
-                    font-weight: 500;
-                    background: #3C93F0;
-                    padding: 16px 22px;
-                    border-radius: 15px;
+            }
+            @media screen and (max-width: 768px) {
+                .main{
+                    margin-left: 0px;
                 }
             }
 
@@ -245,9 +257,6 @@ body{
             }
 
             @media screen and (max-width:1250px ) {
-                // .main_bg{
-                //     width: 45%;
-                // }
                 .main{
                     .icon{
                         margin-right: 4px;
@@ -258,8 +267,7 @@ body{
             }
         }
         .main_mobile_but{
-            display: none;  
-            
+            display: none;
         }
 
         @media screen and (max-width: 576px ){
@@ -268,16 +276,18 @@ body{
                 justify-content: center;
 
                 .but{
-                    padding: 15px 26px;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
                     display: flex;
                     align-items: center;
                     .but_text{
-                        @include adaptiv-font(24, 13);
+                        @include adaptiv-font(24, 10);
                         font-weight: 600;
                         color: #ffffff;
                     }
                 }
                 .but_call{
+                    padding-left: 10px;
                     border-radius: 15px 0px 0px 15px; 
                     background: #3C93F0;
                     img{
@@ -286,6 +296,7 @@ body{
                     }
                 }
                 .but_whats{
+                    padding-right: 10px;
                     border-radius: 0px 15px 15px 0px; 
                     background: #09D743;
                     img{
@@ -296,7 +307,7 @@ body{
                 
             }
         }
-
+    
         @media screen and (max-width: 768px ) {
             .main__container{
                 margin: 25px auto;
@@ -377,7 +388,8 @@ body{
     }
     @media screen and (max-width: 768px) {
         .main_page{
-            background: #02C7FC;
+            background-image: none;
+            background-color: #02C7FC;
             .main__container{
                 margin-top: 50px;
                 .main_bg{
@@ -392,20 +404,6 @@ body{
     .help{
         background: rgb(40, 39, 39);
         .help_container{
-            .title{
-                color: #ffffff;
-                @include adaptiv-font(48, 40);
-                text-align: center;
-                font-weight: 800;
-                margin-top: 70px;
-            }
-            .sub_title{
-                color: #ffffff;
-                @include adaptiv-font(24, 22);
-                text-align: center;
-                font-weight: 400;
-                margin-top: 20px;
-            }
             .help_card{
                 display: flex;
                 justify-content: space-between;
@@ -473,5 +471,90 @@ body{
         }
     }
 
+    .masters{
+        background: rgb(55, 53, 53);
+        margin-bottom: 100px;
+        .masters__container{
+           .masters_add{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 78px;
+            align-items: center;
+                .masters_call{
+                    display: flex;
+                    justify-content: space-between;
+                    background: #EDF3F6;
+                    align-items: center;
+                    padding: 27px 34px;
+                    border-radius: 15px;
+                    color: #3E3E3E;
+                    .call{
+                        .call_text{
+                            border-left: 5px solid #02C7FC;
+                            border-radius: 1px;
+                            padding-left: 13px;
+                            margin-bottom: 42px;
+                           .call_title{
+                                font-weight: 600;
+                                @include adaptiv-font(18, 14);
+                           } 
+
+                           .call_sub_title{
+                            margin-top: 5px;
+                            font-weight: 400;
+                            @include adaptiv-font(13, 12);
+                           }
+                        }
+                    }
+                    .call_r{
+                        width: 25%;
+ 
+                    }
+                    @media screen and (max-width: 768px){
+                        .call_r{
+                            display: none;
+                        }
+                    }
+                }
+                .masters_at{
+                    .at{
+                        li{
+                            font-weight: 700;
+                            @include adaptiv-font(20, 18);
+                            background: url(../img/bx-check-circle.svg.svg) no-repeat 0 50%;
+                            padding-left: 40px;
+                            padding-top: 10px;
+                        }
+                        li:not(:last-child){
+                            margin-bottom: 24px;
+                        }
+                    }
+                }
+                @media screen and (max-width: 1230px){
+                    .masters_at{
+                        margin-left: 20px;
+                    }
+                }
+                @media screen and (max-width: 992px){
+                    .masters_at{
+                        margin-left: 0px;
+                        margin-top: 20px;
+                        display: flex;
+                        justify-content: center;
+                        // .at{
+                        //     li{
+                        //         text-align: center;
+                        //     }
+                        // }
+                    }
+               }
+           }
+           @media screen and (max-width: 992px){
+                .masters_add{
+                    display: block;
+                }
+           } 
+        }
+    }
 
 }
