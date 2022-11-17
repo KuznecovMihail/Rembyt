@@ -419,6 +419,55 @@ body .main_page .main_mobile_but {
     display: block;
   }
 }
+body .guarantees {
+  background: rgb(55, 53, 53);
+}
+body .guarantees .guarantees__container .guarantees_cards {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+body .guarantees .guarantees__container .guarantees_cards .card_item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 23%;
+  background: rgb(237, 243, 246);
+  color: #3E3E3E;
+  padding: 0px 20px 20px;
+}
+body .guarantees .guarantees__container .guarantees_cards .card_item .item_img {
+  max-width: 100px;
+  margin: 0 auto;
+}
+body .guarantees .guarantees__container .guarantees_cards .card_item .item_title {
+  font-size: calc(18px + 2 * ((100vw - 320px) / 960));
+  font-weight: 600;
+  text-align: center;
+}
+body .guarantees .guarantees__container .guarantees_cards .card_item .item_text {
+  margin-top: 10px;
+  font-size: calc(16px + 2 * ((100vw - 320px) / 960));
+  font-weight: 400;
+  text-align: center;
+}
+@media screen and (max-width: 1050px) {
+  body .guarantees .guarantees__container .guarantees_cards {
+    flex-direction: column;
+  }
+  body .guarantees .guarantees__container .guarantees_cards .card_item {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .guarantees .guarantees__container .guarantees_cards .card_item {
+    margin-top: 30px;
+    width: 100%;
+  }
+}
 body .help {
   background: rgb(40, 39, 39);
 }
@@ -499,7 +548,6 @@ body .help .help_container .help_card .card_item .card_flex .card_about .more {
 }
 body .masters {
   background: rgb(55, 53, 53);
-  margin-bottom: 100px;
 }
 body .masters .masters__container .masters_add {
   display: flex;
@@ -586,6 +634,7 @@ body .masters .masters__container .masters_add .masters_at .at li:not(:last-chil
 body .masters .masters__container .swiper {
   margin-top: 50px;
   color: #3E3E3E;
+  margin-bottom: 70px;
 }
 body .masters .masters__container .swiper .swiper-pagination .swiper-pagination-bullet {
   background: #02C7FC;
