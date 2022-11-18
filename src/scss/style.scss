@@ -176,12 +176,13 @@ body{
                     .header_list{
                         display: block;
                         position: fixed;
-                        top: 90px;
+                        top: 0px;
                         left: -100%;
                         width: 100%;
                         height: 100%;
                         transition: all 0.5s ease 0s;
                         background: rgb(40, 39, 39);
+                        padding-top: 80px;
     
                         .header_item{
                             margin-top: 15px;
@@ -391,12 +392,6 @@ body{
     .guarantees{
         background: rgb(55, 53, 53);
         .guarantees__container{
-            .guarantees_title{
-
-            }
-            .guarantees_sub_title{
-
-            }
             .guarantees_cards{
                 margin-top: 20px;
                 display: flex;
@@ -410,6 +405,7 @@ body{
                     background: rgb(237, 243, 246);
                     color: #3E3E3E;
                     padding: 0px 20px 20px;
+                    border-radius: 10px;
                     .item_img{
                         max-width: 100px;
                         margin: 0 auto;
@@ -754,6 +750,114 @@ body{
        }
            
         }
+    }
+
+    .contacts{
+       .contacts__container{
+            .contacts_flex{
+                background: #EDF3F6;
+                padding: 30px 35px;
+                border-radius: 10px;
+                color: #3E3E3E;
+                margin-top: 40px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 70px;
+                .contacts_map{
+                    margin-right: 120px;
+                    width: 100%;
+                    height: 450px;
+                }
+                .contacts_info{
+                    .info{
+                        .card{
+                            display: flex;
+                            align-items: center;
+                        }
+                        .info_tel{
+                            .info_img{
+                                max-width: 30px;
+                                margin-right: 20px;
+                            }
+                            .number{
+                                display: flex;
+                                flex-direction: column;
+                                .contacts_tel{
+                                    @include adaptiv-font(20, 14);
+                                    color: #000;
+                                    font-weight: 600;
+                                }
+                                .contacts_tel:not(:last-child){
+                                    margin-bottom: 5px;
+                                }
+                            }
+                        }
+                        .info_adr{
+                            margin-top: 40px;
+                            .info_img{
+                                width: 30px;
+                                margin-right: 20px;
+
+                            }
+                            .contacts_adr{
+                                @include adaptiv-font(18, 14);
+                                    color: #000;
+                                    font-weight: 500;
+                            }
+                        }
+                        .info_mail{
+                            margin-top: 40px;
+                            .info_img{
+                                width: 30px;
+                                margin-right: 20px;
+                            }
+                            .contacts_mail{
+                                @include adaptiv-font(18, 14);
+                                    color: #000;
+                                    font-weight: 500;
+                            }
+                        }
+                    }
+                    @media screen and (max-width: 350px) {
+                        .info{
+                            .card{
+                                .info_img{
+                                    width: 20px;
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .contacts_button{
+                        margin-top: 70px;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                .contacts_flex{
+                    flex-direction: column-reverse;
+
+                    .contacts_map{
+                        margin: 25px auto;
+                
+                    }
+                }
+            }
+            @media screen and (max-width: 500px) {
+                .contacts_flex{
+                    .contacts_map{
+                        height: 200px;
+                    }
+                }
+            }
+            @media screen and (max-width: 300px) {
+                .contacts_flex{
+                    padding: 15px 15px;
+                }
+            }
+       } 
     }
 
 }

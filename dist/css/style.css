@@ -239,12 +239,13 @@ body .header .header_nav .header_nav_menu .header_list .header_item .header_item
   body .header .header_nav .header_nav_menu .header_list {
     display: block;
     position: fixed;
-    top: 90px;
+    top: 0px;
     left: -100%;
     width: 100%;
     height: 100%;
     transition: all 0.5s ease 0s;
     background: rgb(40, 39, 39);
+    padding-top: 80px;
   }
   body .header .header_nav .header_nav_menu .header_list .header_item {
     margin-top: 15px;
@@ -436,6 +437,7 @@ body .guarantees .guarantees__container .guarantees_cards .card_item {
   background: rgb(237, 243, 246);
   color: #3E3E3E;
   padding: 0px 20px 20px;
+  border-radius: 10px;
 }
 body .guarantees .guarantees__container .guarantees_cards .card_item .item_img {
   max-width: 100px;
@@ -718,5 +720,91 @@ body .masters .masters__container .swiper .swiper-wrapper .swiper-slide .slider_
   body .masters .masters__container .swiper .swiper-wrapper .swiper-slide .slider_card .slider_footer .slider_dot {
     width: 10px;
     margin-right: 5px;
+  }
+}
+body .contacts .contacts__container .contacts_flex {
+  background: #EDF3F6;
+  padding: 30px 35px;
+  border-radius: 10px;
+  color: #3E3E3E;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 70px;
+}
+body .contacts .contacts__container .contacts_flex .contacts_map {
+  margin-right: 120px;
+  width: 100%;
+  height: 450px;
+}
+body .contacts .contacts__container .contacts_flex .contacts_info .info .card {
+  display: flex;
+  align-items: center;
+}
+body .contacts .contacts__container .contacts_flex .contacts_info .info .info_tel .info_img {
+  max-width: 30px;
+  margin-right: 20px;
+}
+body .contacts .contacts__container .contacts_flex .contacts_info .info .info_tel .number {
+  display: flex;
+  flex-direction: column;
+}
+body .contacts .contacts__container .contacts_flex .contacts_info .info .info_tel .number .contacts_tel {
+  font-size: calc(14px + 6 * ((100vw - 320px) / 960));
+  color: #000;
+  font-weight: 600;
+}
+body .contacts .contacts__container .contacts_flex .contacts_info .info .info_tel .number .contacts_tel:not(:last-child) {
+  margin-bottom: 5px;
+}
+body .contacts .contacts__container .contacts_flex .contacts_info .info .info_adr {
+  margin-top: 40px;
+}
+body .contacts .contacts__container .contacts_flex .contacts_info .info .info_adr .info_img {
+  width: 30px;
+  margin-right: 20px;
+}
+body .contacts .contacts__container .contacts_flex .contacts_info .info .info_adr .contacts_adr {
+  font-size: calc(14px + 4 * ((100vw - 320px) / 960));
+  color: #000;
+  font-weight: 500;
+}
+body .contacts .contacts__container .contacts_flex .contacts_info .info .info_mail {
+  margin-top: 40px;
+}
+body .contacts .contacts__container .contacts_flex .contacts_info .info .info_mail .info_img {
+  width: 30px;
+  margin-right: 20px;
+}
+body .contacts .contacts__container .contacts_flex .contacts_info .info .info_mail .contacts_mail {
+  font-size: calc(14px + 4 * ((100vw - 320px) / 960));
+  color: #000;
+  font-weight: 500;
+}
+@media screen and (max-width: 350px) {
+  body .contacts .contacts__container .contacts_flex .contacts_info .info .card .info_img {
+    width: 20px;
+    margin-right: 10px;
+  }
+}
+body .contacts .contacts__container .contacts_flex .contacts_info .contacts_button {
+  margin-top: 70px;
+}
+@media screen and (max-width: 768px) {
+  body .contacts .contacts__container .contacts_flex {
+    flex-direction: column-reverse;
+  }
+  body .contacts .contacts__container .contacts_flex .contacts_map {
+    margin: 25px auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  body .contacts .contacts__container .contacts_flex .contacts_map {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 300px) {
+  body .contacts .contacts__container .contacts_flex {
+    padding: 15px 15px;
   }
 }
