@@ -1,0 +1,79 @@
+@import 'mixin';
+
+.tech{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    a{
+        color: #fff;
+    }
+    .text{
+        @include adaptiv-font(16, 14);
+        
+        margin-top: 20px;
+    }
+    .text:last-child{
+        margin-bottom: 40px;
+    }
+    .tech_sub-title{
+        margin-top: 20px;
+        @include adaptiv-font(18, 16);
+        font-weight: 600;
+    }
+    .tech__container{
+        .tech_header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            .header_title{
+                @include adaptiv-font(28, 20);
+                font-weight: 600;
+            }
+            .header_price{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .price{
+                    @include adaptiv-font(24, 14); 
+                    margin-right: 30px;
+                }
+                .number{
+                    border-radius: 10px;
+                    padding: 10px;
+                    background: #02C7FC;
+                }
+            }
+        }
+        @media screen and (max-width:548px) {
+            .tech_header{
+                .header_price{
+                    margin-top: 10px;
+                }
+            }
+        }
+        .tech_about{
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            .about_img{
+                width: 15%;
+            }
+            @media screen and (max-width: 768px) {
+                .about_img{
+                    display: none;
+                } 
+            }
+        }
+        .tech_malfunctions{
+            .malfunctions_list{
+                margin-top: 10px;
+                margin-right: 10px;
+                .malfunctions_item{
+                    background: url(../img/marker.svg) no-repeat 0 4px;
+                    padding-left: 20px;
+                    margin-top: 7px;
+                }
+            }
+        }
+    }
+}

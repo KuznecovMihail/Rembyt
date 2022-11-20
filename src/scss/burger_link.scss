@@ -1,0 +1,78 @@
+@import 'mixin';
+
+.appliances{
+    .appliances__container{
+        .appliances_text{
+            margin-top: 70px;
+            @include adaptiv-font(24, 20);
+        }
+        .appliances__sub-title{
+            font-weight: 600;
+            margin-top: 40px;
+            text-align: left;
+        }
+        .appliances__cards{
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            .appliances__item{
+                margin-top: 20px;
+                width: 400px;
+                border-radius: 10px;
+                box-shadow: 1px 1px 10px #000;
+                background: #EDF3F6;                
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                margin-right: 15px;
+                .item_img{
+                    max-width: 100%;
+                    width: 140px;
+                    margin-right: 15px;
+                    margin-left: 10px;
+                }
+                @media screen and (max-width: 380px) {
+                    .item_img{
+                        width: 100px;
+                    }
+                }
+                @media screen and (max-width: 300px) {
+                    .item_img{
+                        width: 70px;
+                    }
+                }
+                .item__text{
+                    .item__title{
+                        @include adaptiv-font (18, 12);
+                        color: #3E3E3E;
+                        margin-bottom: 20px;
+                    }
+                    .item__more{
+                        color: #3C93F0;
+                    }
+                }
+            }
+            @media screen and (max-width: 380px) {
+                .appliances__item{
+                    padding: 15px;
+                }
+            }
+            @media screen and (max-width: 300px) {
+                .appliances__item{
+                    padding-left: 0;
+                }
+            }
+        }
+        @media screen and (max-width: 710px) {
+            .title{
+                margin-top: 20px;
+            }
+            .appliances_text{
+                margin-top: 20px;
+            }
+        }
+    }
+}

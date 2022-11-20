@@ -1,5 +1,8 @@
 @import 'fonts';
 @import 'def';
+@import 'burger_link';
+@import 'mixin';
+@import 'tech';
 
 .wrapper {
     min-height: 100vh;
@@ -29,14 +32,6 @@
 
 
 //-------------------------------------------------------------------------------
-
-$maxWidth: 1280;
-@mixin adaptiv-font($pcSize, $mobSize) {
-    $addSize: $pcSize - $mobSize;
-    $maxWidth: $maxWidth - 320;
-    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
-}
-
 
 
 //@include adaptiv-font();
@@ -105,7 +100,7 @@ body{
 
     .title{
         color: #ffffff;
-        @include adaptiv-font(48, 40);
+        @include adaptiv-font(48, 30);
         text-align: center;
         font-weight: 800;
         margin-top: 70px;
@@ -858,6 +853,64 @@ body{
                 }
             }
        } 
+    }
+
+    .footer{
+        background: rgb(55, 53, 53);;
+        .footer__container{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            align-items: center;
+            .footer_nav{
+                .nav_list{
+                    
+                    .nav_item{
+                        a{
+                            @include adaptiv-font(16, 14);
+                            font-weight: 400;
+                            transition: all 0.3s ease 0s;
+                            color: #fff;
+                        }
+                        a:hover{
+                            color: #02C7FC;
+                            
+                        }
+                    }
+                   .nav_item:not(:last-child){
+                    margin-bottom: 7px;
+                   } 
+                }
+            }
+            .footer_about{
+                width: 30%;
+                .footer_numer{
+                    @include adaptiv-font(20, 18);
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    display: block;
+                    color: #ffffff;
+                    span{
+                        color:#02C7FC;
+                    }
+                }
+                .footer_adr{   
+                    margin-bottom: 10px;
+                }   
+            }
+        }
+        @media screen and (max-width: 640px) {
+            .footer__container{
+                flex-direction: column;
+                align-items: start;
+                .footer_about{
+                    margin-top: 20px;   
+                    width: 100%;
+                }
+
+            } 
+        }
     }
 
 }

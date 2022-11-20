@@ -61,6 +61,11 @@ $(function() {
         $('#nav-icon1, .header_list').toggleClass('active');
         $('body').toggleClass('lock');
     });
+    $('.header_item_link').click(function(event) {
+        $('#nav-icon1, .header_list').removeClass('active');
+        $('body').removeClass('lock');
+        $('#nav-icon1').removeClass('open');
+    });
 
 });
 
