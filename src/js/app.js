@@ -52,6 +52,44 @@ const swiper = new Swiper('.swiper', {
 
 });
 
+const openPopUp = document.querySelector('open_pop_up');
+const closePopUp = document.querySelector('close_pop_up');
+const PopUp = document.querySelector('pop_up');
+
+$(document).ready(function() {
+
+	//E-mail Ajax Send
+	$("form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			alert("Thank you!");
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
+
+});
+
+$(function() {
+    $('.open_pop_up').click(function(event){
+        event.preventDefault();
+        $('.pop_up').toggleClass('open');
+        $('body').toggleClass('lock');
+    });
+    $('.close_pop_up').click(function(){
+        $('.pop_up').removeClass('open');
+        $('body').removeClass('lock');
+    });
+
+});
+
 $(function() {
     $('#nav-icon1').click(function(){
         $(this).toggleClass('open');

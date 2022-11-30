@@ -13,7 +13,7 @@
 			<header class="header">
 	<div class="header__container _container">
         <div class="header_nav">
-            <div class="header_logo">Rembyt</div>
+            <a href="#" class="header_logo">Rembyt</a>
             <nav class="header_nav_menu">
                 <div class="header_menu">
                     <ul class="header_list">
@@ -51,7 +51,7 @@
             <h1 class="main_title title">РЕМОНТ ТЕХНИКИ</h1>
             <img src="img/main-page_run.svg" alt="run" class="icon" />
             <div class="main_text">Выезд мастера от 30 минут</div><br>
-            <a href="#" class="main_button button">Оставить заявку</a>
+            <a href="#" class="main_button button open_pop_up">Оставить заявку</a>
         </div>
         <img src="img/main-page_man1.png" alt="man" class="main_bg">
         <div class="main_mobile_but">
@@ -166,7 +166,7 @@
                         <div class="call_title">ПОДБЕРЕМ БЛИЖАЙШЕГО МАСТЕРА</div>
                         <div class="call_sub_title">Введите ваш адрес, и узнайте где ближайший наш мастер. И рассчет время прибытия.</div>
                     </div>
-                    <a href="#" class="call_button button">Вызвать мастера</a href="#">
+                    <a href="#" class="call_button button open_pop_up">Вызвать мастера</a href="#">
                 </div>
                 <img src="img/image-metr.png" alt="rul" class="call_r">
             </div>
@@ -264,7 +264,7 @@
                         <a href="#" class="contacts_mail" target="_blank">info@misterbyt.ru</a>
                     </div>
                 </div>
-                <div class="contacts_button button">Оставить заявку</div>
+                <div class="contacts_button button open_pop_up">Оставить заявку</div>
             </div>
         </div>
     </div> 
@@ -288,6 +288,45 @@
         </div>
     </div>
 </footer>
+			<div class="pop_up">
+    <div class="pop_up__container">
+        <div class="pop_up_body">
+            <div class="pop-up_close close_pop_up">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="body_title">Вызвать мастера</div>
+            <form action="">
+
+                <input type="hidden" name="project_name" value="Rembyt">
+		        <input type="hidden" name="admin_email" value="jaq83618@nezid.com">
+		        <input type="hidden" name="form_subject" value="Form Subject">
+
+                <div class="name text">Введите имя:</div>
+                <input name="Имя" type="input_name">
+                <div class="tel text">Введите номер телефлна:</div>
+                <input name="Телефон" type="input_tel">
+                <div class="tech text">Выберерите технику:</div>
+                <select name="Техника" id="">
+                    <option value="1">Холодильник</option>
+                    <option value="2">Стиральная машина</option>
+                    <option value="3">Посудомоечная машина</option>
+                    <option value="4">Телевизор</option>
+                    <option value="5">Кондиционер</option>
+                    <option value="6">Электроплита</option>
+                    <option value="7">Ноутбук</option>
+                    <option value="8">Компьютер</option>
+                    <option value="9">Смартфон</option>
+                    <option value="10">Игровая приставка</option>
+                    <option value="11">Другое</option>
+                </select>
+                <div class="about text">Опишите неисправность:</div>
+                <textarea name="Описание" class="input_about"></textarea>
+                <button>Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+</div>
 		</div>
 		<script src="js/app.min.js"></script>
 	</body>
